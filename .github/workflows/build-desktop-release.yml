@@ -256,7 +256,6 @@ jobs:
             ./*.apk
 
   release:
-    # NOTE: For now, we only have beta channel to be released on Github
     if: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.build-target == 'beta' }}
     needs: [  build-linux-arm64 ]
     runs-on: ubuntu-latest
