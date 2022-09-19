@@ -482,23 +482,6 @@ jobs:
     needs: [ build-linux-arm64 ]
     runs-on: ubuntu-18.04
     steps:
-      - name: Download MacOS x64 Artifacts
-        uses: actions/download-artifact@v2
-        with:
-          name: logseq-darwin-x64-builds
-          path: ./
-
-      - name: Download MacOS arm64 Artifacts
-        uses: actions/download-artifact@v2
-        with:
-          name: logseq-darwin-arm64-builds
-          path: ./
-
-      - name: Download The Linux X64 Artifacts
-        uses: actions/download-artifact@v2
-        with:
-          name: logseq-linux-x64-builds
-          path: ./
 
       - name: Download The Linux arm64 Artifacts
         uses: actions/download-artifact@v2
@@ -506,17 +489,6 @@ jobs:
           name: logseq-linux-arm64-builds
           path: ./
 
-      - name: Download The Windows Artifact
-        uses: actions/download-artifact@v2
-        with:
-          name: logseq-win64-builds
-          path: ./
-
-      - name: Download Android Artifacts
-        uses: actions/download-artifact@v2
-        with:
-          name: logseq-android-builds
-          path: ./
 
       - name: Generate SHA256 checksums
         run: |
