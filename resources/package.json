@@ -51,7 +51,7 @@
     "@electron-forge/maker-zip": "^6.0.0-beta.57",
     "electron": "19.0.12",
     "electron-builder": "^22.11.7",
-    "electron-forge-maker-appimage": "trusktr/electron-forge-maker-appimage#patch-1",
+    "electron-forge-maker-appimage": "AsocPro/electron-forge-maker-appimage#force-arm",
     "electron-rebuild": "3.2.5"
   },
   "resolutions": {
