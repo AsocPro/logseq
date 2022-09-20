@@ -544,10 +544,6 @@ jobs:
           pkgver=$(cat VERSION)
           echo ::set-output name=version::$pkgver
 
-      - name: Fix .nupkg name in RELEASES file
-        run: |
-          sed -i "s/Logseq-.*.nupkg/Logseq-win-x64-${{ steps.ref.outputs.version }}-full.nupkg/g" RELEASES
-
       - name: Generate SHA256 checksums
         run: |
           sha256sum *-linux-* >> SHA256SUMS.txt
