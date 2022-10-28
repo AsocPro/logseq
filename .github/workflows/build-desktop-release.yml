@@ -241,7 +241,7 @@ jobs:
       #     key: ${{ runner.os }}-node-modules
 
       - name: Fetch deps and fix dugit arch for arm64
-        run: yarn install --ignore-scripts && npm rebuild --arch=amd64 --target_arch=arm64
+        run: yarn install --ignore-scripts && npm rebuild --arch=arm64 --target_arch=arm64
         working-directory: ./static
 
       - name: Build/Release Electron App
